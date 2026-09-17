@@ -35,7 +35,7 @@ const Navbar = () => {
         <Link to={"/"} className="text-red-600 font-orbitron font-bold">
           Film Flex
         </Link>
-        <div>
+        <div className="hidden md:flex">
           <ul className="flex items-center gap-3">
             {navLinks.map((nav) => (
               <NavLink key={nav.name} to={nav?.href || "/"}>

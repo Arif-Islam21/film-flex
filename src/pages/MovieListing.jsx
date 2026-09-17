@@ -19,7 +19,7 @@ const MovieListing = () => {
 
   return (
     <div>
-      <div className="flex px-12 my-3 items-center gap-4">
+      <div className="flex px-4 md:px-12 my-3 items-center gap-4">
         <input
           onChange={(e) => {
             setSearch(e.target.value);
@@ -31,7 +31,7 @@ const MovieListing = () => {
           placeholder="Find movies"
           className="w-full px-8 py-2  rounded-xl border border-gray-300 text-gray-200"
         />
-        <button className="btn-formal px-12 py-2">Search</button>
+        {/* <button className="btn-formal px-12 py-2">Search</button> */}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-3">
         {movies.map((movie) => (

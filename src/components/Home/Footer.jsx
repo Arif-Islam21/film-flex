@@ -10,7 +10,7 @@ const Footer = () => {
       <p className="text-xs font-light">
         Copyright © {new Date().getFullYear()} - All right reserved
       </p>
-      <nav className="flex items-center gap-4 text-sm">
+      <nav className="md:flex hidden items-center gap-4 text-sm">
         <FaFacebookF />
         <FaSquareXTwitter />
         <FaGithubSquare />

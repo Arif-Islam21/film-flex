@@ -14,8 +14,8 @@ const Hero = () => {
         borderRadius: "10px",
       }}
     >
-      <div className="flex items-center min-h-screen justify-between">
-        <div className="md:w-1/2 pl-6 flex flex-col gap-6 items-start  h-full w-full">
+      <div className="flex items-center flex-col md:flex-row min-h-screen justify-evenly md:justify-between">
+        <div className="md:w-1/2 pl-3 md:pl-6 flex flex-col gap-6 items-start  h-full w-full">
           <p className="text-3xl font-bold">
             Find the best movies & shows to watch with friends
           </p>
@@ -30,7 +30,7 @@ const Hero = () => {
             <button className="btn-outline px-5 py-2">Learn more</button>
           </div>
         </div>
-        <div className=" md:w-1/2">
+        <div className="w-full md:w-1/2">
           <img src={robot} alt="movie bot" />
         </div>
       </div>

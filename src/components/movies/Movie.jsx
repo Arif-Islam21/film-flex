@@ -29,14 +29,14 @@ const Movie = ({ movie }) => {
 
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-1 mb-4">
-            <MdPublish className="text-red-600" size={20} />
-            <h4 className="text-xs font-semibold">{movie?.show?.premiered}</h4>
-          </div>
-          <div className="flex items-center gap-1 mb-4">
             <FaStar className="text-red-600" size={16} />
             <h4 className="text-xs font-semibold">
               {movie?.show?.rating.average}
             </h4>
+          </div>
+          <div className="flex items-center gap-1 mb-4">
+            <MdPublish className="text-red-600" size={20} />
+            <h4 className="text-xs font-semibold">{movie?.show?.premiered}</h4>
           </div>
         </div>
 
