@@ -2,8 +2,6 @@ import { FaStar } from "react-icons/fa";
 import { MdPublish } from "react-icons/md";
 
 const Movie = ({ movie }) => {
-  console.log(movie);
-
   return (
     <div className="shadow-sm shadow-gray-800 rounded-xl ">
       <figure>

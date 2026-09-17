@@ -3,21 +3,30 @@ import Movie from "../components/movies/Movie";
 
 const MovieListing = () => {
   const [movies, setMovies] = useState([]);
+  const [search, setSearch] = useState("boys");
 
   useEffect(() => {
     const getMovies = async () => {
-      const res = await fetch(`https://api.tvmaze.com/search/shows?q=boys`);
+      const res = await fetch(
+        `https://api.tvmaze.com/search/shows?q=${search}`,
+      );
       const data = await res.json();
       setMovies(data);
     };
 
     getMovies();
-  }, []);
+  }, [search]);
 
   return (
     <div>
       <div className="flex px-12 my-3 items-center gap-4">
         <input
+          onChange={(e) => {
+            setSearch(e.target.value);
+            if (e.target.value === "") {
+              setSearch("boys");
+            }
+          }}
           type="text"
           placeholder="Find movies"
           className="w-full px-8 py-2  rounded-xl border border-gray-300 text-gray-200"

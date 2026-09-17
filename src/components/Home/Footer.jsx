@@ -3,7 +3,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-between items-center mt-10 px-6 py-2">
+    <footer className="flex justify-between items-center mt-7 px-6 py-2">
       <div className="flex items-center justify-between gap-3">
         <h2 className="text-red-600 font-orbitron font-bold">Film Flex</h2>
       </div>
