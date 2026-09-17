@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import image from "../../assets/movie.jpg";
 import robot from "../../assets/robot.png";
 
@@ -23,7 +24,9 @@ const Hero = () => {
             taste
           </p>
           <div className="flex items-center w-full gap-16">
-            <button className="btn-primary">Watch Now</button>
+            <Link to="/movie-listing">
+              <button className="btn-primary">Watch Now</button>
+            </Link>
             <button className="btn-outline px-5 py-2">Learn more</button>
           </div>
         </div>

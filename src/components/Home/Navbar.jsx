@@ -1,29 +1,29 @@
 import { Film, Tv, Tags, TrendingUp } from "lucide-react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const navLinks = [
     {
       name: "Movies",
-      href: "/movies",
+      href: "/movie-listing",
       icon: Film,
       description: "Browse all movies",
     },
     {
       name: "TV Shows",
-      href: "/tv-shows",
+      // href: "/tv-shows",
       icon: Tv,
       description: "Explore TV shows and series",
     },
     {
       name: "Genres",
-      href: "/genres",
+      // href: "/genres",
       icon: Tags,
       description: "Browse by genre",
     },
     {
       name: "Popular",
-      href: "/popular",
+      // href: "/popular",
       icon: TrendingUp,
       description: "See what's trending",
     },
@@ -37,15 +37,19 @@ const Navbar = () => {
       <div>
         <ul className="flex items-center gap-3">
           {navLinks.map((nav) => (
-            <li className="btn-outline px-3 py-1 " key={nav.name}>
-              <nav.icon size={18} /> {nav.name}
-            </li>
+            <NavLink key={nav.name} to={nav?.href || "/"}>
+              <li className="btn-outline px-3 py-1 ">
+                <nav.icon size={18} /> {nav.name}
+              </li>
+            </NavLink>
           ))}
         </ul>
       </div>
-      <button className="btn-primary duration-1000 transition-all animate-pulse ">
-        Watch Now
-      </button>
+      <NavLink to="/movie-listing">
+        <button className="btn-primary duration-1000 transition-all animate-pulse ">
+          Watch Now
+        </button>
+      </NavLink>
     </div>
   );
 };
