@@ -30,26 +30,28 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="px-8 py-3 flex items-center justify-between">
-      <Link to={"/"} className="text-red-600 font-orbitron font-bold">
-        Film Flex
-      </Link>
-      <div>
-        <ul className="flex items-center gap-3">
-          {navLinks.map((nav) => (
-            <NavLink key={nav.name} to={nav?.href || "/"}>
-              <li className="btn-outline px-3 py-1 ">
-                <nav.icon size={18} /> {nav.name}
-              </li>
-            </NavLink>
-          ))}
-        </ul>
+    <div className="">
+      <div className="px-8 py-3 flex items-center justify-between">
+        <Link to={"/"} className="text-red-600 font-orbitron font-bold">
+          Film Flex
+        </Link>
+        <div>
+          <ul className="flex items-center gap-3">
+            {navLinks.map((nav) => (
+              <NavLink key={nav.name} to={nav?.href || "/"}>
+                <li className="btn-outline px-3 py-1 ">
+                  <nav.icon size={18} /> {nav.name}
+                </li>
+              </NavLink>
+            ))}
+          </ul>
+        </div>
+        <NavLink to="/movie-listing">
+          <button className="btn-primary duration-1000 transition-all animate-pulse ">
+            Watch Now
+          </button>
+        </NavLink>
       </div>
-      <NavLink to="/movie-listing">
-        <button className="btn-primary duration-1000 transition-all animate-pulse ">
-          Watch Now
-        </button>
-      </NavLink>
     </div>
   );
 };
