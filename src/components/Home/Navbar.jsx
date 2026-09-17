@@ -37,16 +37,13 @@ const Navbar = () => {
       <div>
         <ul className="flex items-center gap-3">
           {navLinks.map((nav) => (
-            <li
-              className="px-3 py-1 rounded-lg border-red-600 cursor-pointer border font-bold flex items-center gap-2 text-red-700 text-sm"
-              key={nav.name}
-            >
+            <li className="btn-outline px-3 py-1 " key={nav.name}>
               <nav.icon size={18} /> {nav.name}
             </li>
           ))}
         </ul>
       </div>
-      <button className="bg-red-600 px-6 py-2 rounded-lg text-gray-900 cursor-pointer  duration-1000 transition-all animate-pulse font-bold">
+      <button className="btn-primary duration-1000 transition-all animate-pulse ">
         Watch Now
       </button>
     </div>
