@@ -204,3 +204,7 @@ Students must submit the following via the designated submission portal:
 - **No Copying:** Do not copy code from peers or online sources.
 - **No AI Code:** Do not use AI generators. We actively run AI code detection tools.
 - **Original Work:** All code must be 100% your own.
+
+https://film-flex-nine.vercel.app
+
+https://film-flex-o23rviaea-arifs-projects-c80db1af.vercel.app
