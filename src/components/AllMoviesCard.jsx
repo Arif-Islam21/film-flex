@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { MdPublish } from "react-icons/md";
+import AllMovieModal from "./modals/AllMovieModal";
 
 const AllMoviesCard = ({ movie }) => {
-  console.log(movie);
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="shadow-sm shadow-gray-800 rounded-xl ">
       <figure>
@@ -38,11 +41,21 @@ const AllMoviesCard = ({ movie }) => {
         </div>
 
         <div className="">
-          <button className="w-full btn-outline justify-center py-1">
+          <button
+            onClick={() => setOpenModal(true)}
+            className="w-full btn-outline justify-center py-1"
+          >
             See Details
           </button>
         </div>
       </div>
+      {openModal && (
+        <AllMovieModal
+          openModal={openModal}
+          movieId={movie?.id}
+          setOpenModal={setOpenModal}
+        />
+      )}
     </div>
   );
 };
