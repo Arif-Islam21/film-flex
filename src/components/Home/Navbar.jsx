@@ -1,18 +1,18 @@
-import { Film, Tv, Tags, TrendingUp } from "lucide-react";
+import { Film, Search, Tags, TrendingUp } from "lucide-react";
 import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   const navLinks = [
     {
-      name: "Movies",
+      name: "Browse",
       href: "/movie-listing",
-      icon: Film,
+      icon: Search,
       description: "Browse all movies",
     },
     {
-      name: "TV Shows",
-      // href: "/tv-shows",
-      icon: Tv,
+      name: "Movies",
+      href: "/movies",
+      icon: Film,
       description: "Explore TV shows and series",
     },
     {
